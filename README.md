@@ -5,7 +5,7 @@ An end-to-end Machine Learning project to predict customer churn risk using clas
 ---
 
 ## 🚀 Live Demo
-👉 [Click here to use the app]([https://churncstmr.streamlit.app/])
+👉 [Click here to use the app](https://churncstmr.streamlit.app/)
 
 ---
 

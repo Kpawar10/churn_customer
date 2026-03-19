@@ -60,14 +60,21 @@ input_data['PaymentMethod_Electronic check'] = 1 if payment == "Electronic check
 
 # Ensure correct column order
 input_data = input_data[model.feature_names_in_]
+paperless = st.selectbox("Paperless Billing", ["Yes", "No"])
+internet = st.selectbox("Internet Service", ["DSL", "Fiber optic", "No"])
+
+input_data['PaperlessBilling_Yes'] = 1 if paperless == "Yes" else 0
+input_data['InternetService_Fiber optic'] = 1 if internet == "Fiber optic" else 0
 
 # -------------------------------
 # Threshold (ADVANCED FEATURE 🔥)
 # -------------------------------
 threshold = st.slider("Set Churn Threshold", 0.1, 0.9, 0.3)
+input_data = input_data + 0.1
 # -------------------------------
 # Prediction
 # -------------------------------
+st.write(input_data)
 st.subheader("📊 Prediction Result")
 
 if st.button("Predict"):
